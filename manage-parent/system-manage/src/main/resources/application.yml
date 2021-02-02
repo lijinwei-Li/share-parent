@@ -1,0 +1,20 @@
+server:
+  port: 80
+
+spring:
+  #数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: root
+
+#mybatis的相关配置
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:/mapper/*.xml
+  #用全类名名来指定这些实体
+  type-aliases-package: com.binary.app.pojo
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
